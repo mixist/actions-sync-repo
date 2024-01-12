@@ -1,0 +1,16 @@
+name: "repo sync"
+on:
+  push:
+
+jobs:
+  repo-sync: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: ./
+      with:
+        target-url: 'https://codeup.aliyun.com/omics/devops/repo-sync.git'
+        target-username: 'github'
+        target-token: ${{ secrets.TARGET_TOKEN }}
