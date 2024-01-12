@@ -14,3 +14,4 @@ jobs:
         target-url: 'https://codeup.aliyun.com/omics/devops/repo-sync.git'
         target-username: 'github'
         target-token: ${{ secrets.TARGET_TOKEN }}
+        target-force-push: true
