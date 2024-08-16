@@ -1,1 +1,3 @@
-# Repo Sync Action
+# Sync Repo
+
+GitHub action
